@@ -13,6 +13,7 @@
 		ACA983871E504F91004526D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA983851E504F91004526D0 /* Main.storyboard */; };
 		ACA983891E504F91004526D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA983881E504F91004526D0 /* Assets.xcassets */; };
 		ACA9838C1E504F91004526D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA9838A1E504F91004526D0 /* LaunchScreen.storyboard */; };
+		DC169DC37118DA7DA5E48770 /* libPods-ScrollTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D61853ECC25F4957799BB9B7 /* libPods-ScrollTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		ACA983881E504F91004526D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACA9838B1E504F91004526D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACA9838D1E504F91004526D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C4B23353765DD109206396 /* Pods-ScrollTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollTest/Pods-ScrollTest.release.xcconfig"; sourceTree = "<group>"; };
+		D5AA5D03DD63FA68DD08FC3E /* Pods-ScrollTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollTest/Pods-ScrollTest.debug.xcconfig"; sourceTree = "<group>"; };
+		D61853ECC25F4957799BB9B7 /* libPods-ScrollTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC169DC37118DA7DA5E48770 /* libPods-ScrollTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				ACA9837B1E504F90004526D0 /* ScrollTest */,
 				ACA9837A1E504F90004526D0 /* Products */,
+				F35140024B42DB86A54C9673 /* Pods */,
+				FF7AB3A394E743DA9FBC553E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F35140024B42DB86A54C9673 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA5D03DD63FA68DD08FC3E /* Pods-ScrollTest.debug.xcconfig */,
+				C2C4B23353765DD109206396 /* Pods-ScrollTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF7AB3A394E743DA9FBC553E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D61853ECC25F4957799BB9B7 /* libPods-ScrollTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACA983901E504F91004526D0 /* Build configuration list for PBXNativeTarget "ScrollTest" */;
 			buildPhases = (
+				E05E8EEC3C71A2A315705168 /* [CP] Check Pods Manifest.lock */,
 				ACA983751E504F90004526D0 /* Sources */,
 				ACA983761E504F90004526D0 /* Frameworks */,
 				ACA983771E504F90004526D0 /* Resources */,
+				5D7F7DB4905E9A29DF6D20BB /* [CP] Embed Pods Frameworks */,
+				E6D90A3FE9576F8DF29671A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D7F7DB4905E9A29DF6D20BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollTest/Pods-ScrollTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05E8EEC3C71A2A315705168 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6D90A3FE9576F8DF29671A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrollTest/Pods-ScrollTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ACA983751E504F90004526D0 /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		ACA983911E504F91004526D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5AA5D03DD63FA68DD08FC3E /* Pods-ScrollTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScrollTest/Info.plist;
@@ -281,6 +357,7 @@
 		};
 		ACA983921E504F91004526D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C4B23353765DD109206396 /* Pods-ScrollTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScrollTest/Info.plist;
@@ -309,6 +386,7 @@
 				ACA983921E504F91004526D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

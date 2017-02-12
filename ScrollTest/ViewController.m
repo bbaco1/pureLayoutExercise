@@ -16,14 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)segmentedControlTouched:(UISegmentedControl *)sender {
+    [self removeSubviewsForHolderView];
+    if (sender.selectedSegmentIndex == 0) {
+        [self setupConstrainsForView:self.whiteView withSize:CGSizeMake(100, 400)];
+    } else if (sender.selectedSegmentIndex == 1) {
+        [self setupConstrainsForView:self.redView withSize:CGSizeMake(200, 100)];
+    }
 }
 
+- (void)removeSubviewsForHolderView {
+    for (UIView *view in self.holderView.subviews) {
+        [view removeFromSuperview];
+    }
+}
+
+- (void)setupConstrainsForView:(UIView *)view withSize:(CGSize)size {
+    [self.holderView addSubview:view];
+    [view autoSetDimensionsToSize:size];
+    [view autoPinEdgesToSuperviewEdges];
+}
 
 @end

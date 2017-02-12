@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HolderView.h"
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *holderView;
+@property (weak, nonatomic) IBOutlet UIView *whiteView;
+@property (strong, nonatomic) IBOutlet UIView *redView;
+
+- (IBAction)segmentedControlTouched:(UISegmentedControl *)sender;
 
 @end
 

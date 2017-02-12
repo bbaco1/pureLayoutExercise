@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQv-tp-YTi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wud-Ub-TML">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="876"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="igm-0h-ZYS">
+                                                <rect key="frame" x="89.5" y="134" width="197" height="29"/>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                    <segment title="No VIew"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="segmentedControlTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jva-cy-MV7"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rr8-0J-vCg">
+                                                <rect key="frame" x="67" y="269" width="240" height="337"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq3-p6-m2W">
+                                                <rect key="frame" x="164" y="729" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rr8-0J-vCg" firstAttribute="top" secondItem="igm-0h-ZYS" secondAttribute="bottom" constant="107" id="CsC-eP-DOU"/>
+                                            <constraint firstItem="Bq3-p6-m2W" firstAttribute="centerX" secondItem="wud-Ub-TML" secondAttribute="centerX" id="FQH-pA-a10"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bq3-p6-m2W" secondAttribute="bottom" constant="117" id="Z8j-Pj-f3s"/>
+                                            <constraint firstItem="rr8-0J-vCg" firstAttribute="centerX" secondItem="wud-Ub-TML" secondAttribute="centerX" id="hK7-7h-GQ8"/>
+                                            <constraint firstItem="igm-0h-ZYS" firstAttribute="top" secondItem="wud-Ub-TML" secondAttribute="top" constant="134" id="n1e-pP-Wxg"/>
+                                            <constraint firstItem="igm-0h-ZYS" firstAttribute="centerX" secondItem="wud-Ub-TML" secondAttribute="centerX" id="pug-gJ-ebL"/>
+                                            <constraint firstItem="Bq3-p6-m2W" firstAttribute="top" secondItem="rr8-0J-vCg" secondAttribute="bottom" constant="123" id="uWW-xu-QAG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wud-Ub-TML" secondAttribute="bottom" id="3wL-wh-fAs"/>
+                                    <constraint firstItem="wud-Ub-TML" firstAttribute="top" secondItem="fQv-tp-YTi" secondAttribute="top" id="mBQ-0a-TLj"/>
+                                    <constraint firstAttribute="trailing" secondItem="wud-Ub-TML" secondAttribute="trailing" id="mD5-yq-gpl"/>
+                                    <constraint firstItem="wud-Ub-TML" firstAttribute="leading" secondItem="fQv-tp-YTi" secondAttribute="leading" id="yLx-Ec-1VS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fQv-tp-YTi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="50g-RZ-quw"/>
+                            <constraint firstItem="wud-Ub-TML" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="58g-e2-2zL"/>
+                            <constraint firstItem="fQv-tp-YTi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Bku-JM-YpL"/>
+                            <constraint firstItem="fQv-tp-YTi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EYG-wP-iFr"/>
+                            <constraint firstItem="fQv-tp-YTi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WhR-zR-QPt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="holderView" destination="rr8-0J-vCg" id="eeu-0g-laz"/>
+                        <outlet property="redView" destination="aZ7-64-tLm" id="lIA-F8-nNl"/>
+                        <outlet property="whiteView" destination="42q-E9-zJe" id="icd-VJ-h5f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="42q-E9-zJe">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="aZ7-64-tLm">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.87450980389999999" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
