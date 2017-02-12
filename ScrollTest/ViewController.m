@@ -20,9 +20,9 @@
 
 - (IBAction)segmentedControlTouched:(UISegmentedControl *)sender {
     [self removeSubviewsForHolderView];
-    if (sender.selectedSegmentIndex == 0) {
+    if (sender.selectedSegmentIndex == 1) {
         [self setupConstrainsForView:self.whiteView withSize:CGSizeMake(100, 400)];
-    } else if (sender.selectedSegmentIndex == 1) {
+    } else if (sender.selectedSegmentIndex == 2) {
         [self setupConstrainsForView:self.redView withSize:CGSizeMake(200, 100)];
     }
 }

@@ -28,11 +28,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="876"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="igm-0h-ZYS">
-                                                <rect key="frame" x="89.5" y="134" width="197" height="29"/>
+                                                <rect key="frame" x="63.5" y="134" width="248" height="29"/>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                    <segment title="No VIew"/>
+                                                    <segment title="No View"/>
+                                                    <segment title="White View"/>
+                                                    <segment title="Red View"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="segmentedControlTouched:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jva-cy-MV7"/>
